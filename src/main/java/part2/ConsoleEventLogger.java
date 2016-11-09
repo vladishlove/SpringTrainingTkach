@@ -7,6 +7,9 @@ public class ConsoleEventLogger implements EventLogger {
     public ConsoleEventLogger() {
     }
 
+    public ConsoleEventLogger(Event event) {
+    }
+
     public void logEvent(Event event) {
         System.out.println(event);
     }

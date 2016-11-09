@@ -12,9 +12,22 @@
         <constructor-arg ref="client"/>
         <constructor-arg ref="eventLogger"/>
     </bean>
-    <bean id="eventLogger" class="part2.ConsoleEventLogger" scope="prototype">
 
+    <bean id="eventLogger" class="part2.ConsoleEventLogger">
+        <constructor-arg ref="event"/>
     </bean>
-    <bean id="event" class="part2.Event"/>
+
+    <bean id="event" class="part2.Event" scope="prototype">
+        <constructor-arg ref="localDateTime"/>
+        <constructor-arg ref="formatter"/>
+    </bean>
+    <bean id="localDateTime" class="java.time.LocalDateTime"
+          factory-method="now" scope="prototype"/>
+    <bean id = "formatter" class="java.time.format.DateTimeFormatter"
+          factory-method="ofPattern">
+        <constructor-arg value="dd MM YYYY hh:mm:ss"/>
+    </bean>
+
+
 
 </beans>

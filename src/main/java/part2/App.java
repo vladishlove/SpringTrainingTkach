@@ -9,6 +9,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     static Client client;
     static EventLogger consoleEventLogger;
+    static Event event;
+    static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+
     public App (Client cl, EventLogger logger) {
         this.client = cl;
         this.consoleEventLogger = logger;
@@ -18,14 +21,14 @@ public class App {
     }
 
     public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
         App app = ctx.getBean("app", App.class);
         app.eventLogger("Some event for user 1");
     }
     public static void eventLogger(String msg) {
+        Event event = ctx.getBean("event", Event.class);
         String message = msg.replaceAll(String.valueOf(client.getId()), client.getFullName());
-        consoleEventLogger.logEvent(message);
+        event.setMessage(message);
+        consoleEventLogger.logEvent(event);
     }
-
 }
