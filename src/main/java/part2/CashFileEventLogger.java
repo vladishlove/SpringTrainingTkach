@@ -44,5 +44,4 @@ public class CashFileEventLogger extends FileEventLogger {
             super.logEvent(ev);
         }
     }
-
 }

@@ -13,10 +13,11 @@ public class FileEventLogger implements EventLogger {
     File file;
     public FileEventLogger () {}
     public FileEventLogger (String fileName) {
-        System.out.println("in file logger");
+        System.out.println("in constructor of "+ this.getClass().getName());
         this.fileName = fileName;
     }
     public void init() throws IOException{
+        System.out.println("in init method of " + this.getClass().getName());
         this.file = new File(fileName);
         if (!file.canWrite()) throw new IOException();
     }
