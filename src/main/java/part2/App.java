@@ -9,7 +9,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     static Client client;
     static EventLogger consoleEventLogger;
-    static Event event;
     static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
     public App (Client cl, EventLogger logger) {
