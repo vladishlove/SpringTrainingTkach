@@ -18,16 +18,14 @@
     </bean>
 
     <bean id="event" class="part2.Event" scope="prototype">
-        <constructor-arg ref="localDateTime"/>
-        <constructor-arg ref="formatter"/>
+        <constructor-arg>
+            <bean class="java.time.LocalDateTime"
+                  factory-method="now"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="java.time.format.DateTimeFormatter" factory-method="ofPattern">
+                <constructor-arg value="dd MM YYYY hh:mm:ss"/>
+            </bean>
+        </constructor-arg>
     </bean>
-    <bean id="localDateTime" class="java.time.LocalDateTime"
-          factory-method="now" scope="prototype"/>
-    <bean id = "formatter" class="java.time.format.DateTimeFormatter"
-          factory-method="ofPattern">
-        <constructor-arg value="dd MM YYYY hh:mm:ss"/>
-    </bean>
-
-
-
 </beans>
