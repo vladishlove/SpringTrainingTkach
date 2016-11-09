@@ -1,6 +1,7 @@
 package part2;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     static Client client;
     static EventLogger consoleEventLogger;
-    static ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+    static ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
     public App (Client cl, EventLogger logger) {
         this.client = cl;
@@ -20,9 +21,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-
         App app = ctx.getBean("app", App.class);
         app.eventLogger("Some event for user 1");
+        ctx.close();
     }
     public static void eventLogger(String msg) {
         Event event = ctx.getBean("event", Event.class);

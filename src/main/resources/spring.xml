@@ -15,12 +15,13 @@
 
     <!--<bean id="eventLogger" class="part2.ConsoleEventLogger">-->
     <!--</bean>-->
-    <bean id="eventLogger" class="part2.FileEventLogger"
-          init-method="init">
+    <bean id="eventLogger" class="part2.CashFileEventLogger"
+          init-method="init" destroy-method="destroy">
+        <constructor-arg type="java.lang.Integer" value="5"/>
         <constructor-arg
                 value="C:\Users\Vlad\IdeaProjects\SpringTraining\src\main\resources\files\log.txt"/>
-
     </bean>
+
 
     <bean id="event" class="part2.Event" scope="prototype">
         <constructor-arg>

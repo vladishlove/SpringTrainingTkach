@@ -13,14 +13,18 @@ public class FileEventLogger implements EventLogger {
     File file;
     public FileEventLogger () {}
     public FileEventLogger (String fileName) {
+        System.out.println("in file logger");
         this.fileName = fileName;
     }
     public void init() throws IOException{
         this.file = new File(fileName);
+        if (!file.canWrite()) throw new IOException();
     }
     public void logEvent(Event event) {
+        System.out.println("in log event method");
         try {
-            FileUtils.writeStringToFile(new File(fileName), event.toString(), true);
+            FileUtils.writeStringToFile(new File(fileName),
+                    event.toString()+System.lineSeparator(), true);
         } catch (IOException e) {
             e.printStackTrace();
         }
