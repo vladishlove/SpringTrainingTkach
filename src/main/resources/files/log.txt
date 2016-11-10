@@ -7,3 +7,8 @@ Event{id=66799915, message='Some error event for user Petr Greeting: Good job', 
 Event{id=-2015252332, message='Some info event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
 Event{id=-1572077972, message='Some error event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
 Event{id=-31651745, message='Some default event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
+Event{id=-920118045, message='Some default event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:07}
+Event{id=-968185851, message='Some error event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
+Event{id=544463472, message='Some info event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
+Event{id=841438070, message='Some error event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
+Event{id=342434726, message='Some default event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
