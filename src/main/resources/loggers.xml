@@ -9,10 +9,18 @@
     <bean id="fileLogger" class="part2.FileEventLogger"
           init-method="init">
         <constructor-arg
-                value="C:\Users\Vlad\IdeaProjects\SpringTraining\src\main\resources\files\log.txt"/>
+                value="/home/vlad/IdeaProjects/SpringTrainingTkach/src/main/resources/files/log.txt"/>
     </bean>
     <bean id="cashFileLogger" class="part2.CashFileEventLogger"
           parent="fileLogger" destroy-method="destroy">
         <constructor-arg type="java.lang.Integer" value="5"/>
+    </bean>
+    <bean id="combinedEventLogger" class="part2.CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="eventLogger"/>
+                <ref bean="fileLogger"/>
+            </list>
+        </constructor-arg>
     </bean>
 </beans>

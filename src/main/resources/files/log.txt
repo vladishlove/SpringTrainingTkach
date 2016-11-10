@@ -1,0 +1,9 @@
+Event{id=60775588, message='Some event for user Petr', dateTime=10 11 2016 11:04:12}
+Event{id=1885377426, message='Some event for user Petr', dateTime=10 11 2016 11:04:41}
+Event{id=-1208013376, message='Some event for user PetrGood job', dateTime=10 11 2016 11:38:57}
+Event{id=918589367, message='Some event for user PetrGreeting: Good job', dateTime=10 11 2016 11:39:48}
+Event{id=1091453082, message='Some default event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
+Event{id=66799915, message='Some error event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
+Event{id=-2015252332, message='Some info event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
+Event{id=-1572077972, message='Some error event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}
+Event{id=-31651745, message='Some default event for user Petr Greeting: Good job', dateTime=10 11 2016 03:23:21}

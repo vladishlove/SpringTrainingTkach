@@ -6,6 +6,16 @@ package part2;
 public class Client {
     private String id;
     private String fullName;
+    private String greeting;
+
+    public String getGreeting() {
+        return greeting;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
     public Client() {
         super();
     }
@@ -36,6 +46,7 @@ public class Client {
         return "Client{" +
                 "id='" + id + '\'' +
                 ", fullName='" + fullName + '\'' +
+                ", greeting='" + greeting + '\'' +
                 '}';
     }
 }

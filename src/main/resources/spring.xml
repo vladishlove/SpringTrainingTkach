@@ -5,13 +5,21 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <import resource="loggers.xml"/>
+
     <bean id="client" class="part2.Client">
         <constructor-arg value="1"/>
         <constructor-arg value="Petr"/>
+        <property name="greeting" value="Good job"/>
     </bean>
     <bean id="app" class="part2.App">
         <constructor-arg ref="client"/>
-        <constructor-arg ref="cashFileLogger"/>
+        <constructor-arg ref="fileLogger"/>
+        <constructor-arg>
+            <map>
+                <entry key="ERROR" value-ref="combinedEventLogger"/>
+                <entry key="INFO" value-ref="fileLogger"/>
+            </map>
+        </constructor-arg>
     </bean>
 
     <bean id="event" class="part2.Event" scope="prototype">

@@ -19,7 +19,7 @@ public class FileEventLogger implements EventLogger {
     public void init() throws IOException{
         System.out.println("in init method of " + this.getClass().getName());
         this.file = new File(fileName);
-        if (!file.canWrite()) throw new IOException();
+        //if (!file.canWrite()) throw new IOException();
     }
     public void logEvent(Event event) {
         System.out.println("in log event method");
