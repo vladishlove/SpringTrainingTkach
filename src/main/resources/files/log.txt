@@ -12,3 +12,8 @@ Event{id=-968185851, message='Some error event for user Vasiliy Greeting: Hello,
 Event{id=544463472, message='Some info event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
 Event{id=841438070, message='Some error event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
 Event{id=342434726, message='Some default event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:28:08}
+Event{id=-1941169199, message='Some default event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:51:43}
+Event{id=-1680416246, message='Some error event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:51:43}
+Event{id=-1432501678, message='Some info event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:51:43}
+Event{id=-1998629528, message='Some error event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:51:43}
+Event{id=-161196857, message='Some default event for user Vasiliy Greeting: Hello, I'm Vasia!', dateTime=10 11 2016 05:51:43}
