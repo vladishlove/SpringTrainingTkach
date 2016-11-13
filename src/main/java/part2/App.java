@@ -3,6 +3,7 @@ package part2;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
@@ -12,10 +13,19 @@ public class App {
     static Client client;
     static Map<EventType, ? extends EventLogger> loggerMap;
     static ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+
+    public static EventLogger getDefaultLogger() {
+        return defaultLogger;
+    }
+
+    public static void setDefaultLogger(EventLogger defaultLogger) {
+        App.defaultLogger = defaultLogger;
+    }
+
     static EventLogger defaultLogger;
 
-    public App (Client cl, EventLogger logger, Map<EventType, ? extends EventLogger> loggerMap) {
-        this.client = cl;
+    public App (Client client, EventLogger logger, Map<EventType, ? extends EventLogger> loggerMap) {
+        this.client = client;
         this.defaultLogger = logger;
         this.loggerMap = loggerMap;
     }

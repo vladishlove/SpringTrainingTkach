@@ -13,6 +13,18 @@ public class Event {
     private LocalDateTime dateTime;
     private DateTimeFormatter formatter;
 
+
+    public static boolean isDay() {
+        int dayStartHour = 8;
+        int dayEndHour = 17;
+        return (LocalDateTime.now().getHour() > dayStartHour &&
+                LocalDateTime.now().getHour() < dayEndHour) ?
+                true : false;
+
+    }
+
+    private boolean isDay;
+
     public Event() {
         super();
     }

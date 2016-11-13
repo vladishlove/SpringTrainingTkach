@@ -9,7 +9,7 @@
     <bean id="fileLogger" class="part2.FileEventLogger"
           init-method="init">
         <constructor-arg
-                value="/home/vlad/IdeaProjects/SpringTrainingTkach/src/main/resources/files/log.txt"/>
+                value="C:\Users\Vlad\IdeaProjects\SpringTrainingTkach\src\main\resources\files\log.txt"/>
     </bean>
     <bean id="cashFileLogger" class="part2.CashFileEventLogger"
           parent="fileLogger" destroy-method="destroy">
