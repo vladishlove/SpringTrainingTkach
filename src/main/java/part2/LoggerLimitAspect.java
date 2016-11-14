@@ -19,7 +19,7 @@ public class LoggerLimitAspect {
         MAX_COUNT = maxCount;
     }
 
-    @Pointcut("execution(* *.logEvent(..)) && within(part2.ConsoleEventLogger) args(evt)")
+    @Pointcut("execution(* *.logEvent(..)) && within(part2.ConsoleEventLogger)")
     private void consoleLoggerMethods() {
     }
     @Around("consoleLoggerMethods() && args(evt)")
@@ -32,8 +32,9 @@ public class LoggerLimitAspect {
             jp.proceed(new Object[] {evt});
         }
         else {
-            System.out.println("ConsoleEventLogger max count is reached. Logging to " + otherLogger.getClass()
-                    .getSimpleName());
+            System.out.println("ConsoleEventLogger max count is reached. Logging to " + otherLogger.
+                    getClass());
+            evt.setMessage(evt.getMessage()+" - REDIRECTED");
             otherLogger.logEvent(evt);
         }
     }

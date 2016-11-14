@@ -155,3 +155,18 @@ Event{id=974315403, message='Some info event for user Vasiliy Greeting: Vlad', d
 Event{id=-582934661, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:30:35}
 Event{id=-582934661, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:30:35}
 Event{id=-1637804436, message='Some default event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:30:35}
+Event{id=804064791, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:33:27}
+Event{id=1894705643, message='Some info event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:33:27}
+Event{id=-970113793, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:33:27}
+Event{id=-970113793, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:33:27}
+Event{id=-968766637, message='Some default event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:33:27}
+Event{id=784319866, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:35:01}
+Event{id=-1537977079, message='Some info event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:35:01}
+Event{id=1259944300, message='Some error event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:01}
+Event{id=1259944300, message='Some error event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:01}
+Event{id=144472803, message='Some default event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:01}
+Event{id=2073072558, message='Some error event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:35:58}
+Event{id=105616637, message='Some info event for user Vasiliy Greeting: Vlad', dateTime=15 11 2016 12:35:58}
+Event{id=-945231852, message='Some error event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:58}
+Event{id=-945231852, message='Some error event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:58}
+Event{id=-1288950423, message='Some default event for user Vasiliy Greeting: Vlad - REDIRECTED', dateTime=15 11 2016 12:35:58}
