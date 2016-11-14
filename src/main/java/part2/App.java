@@ -3,7 +3,6 @@ package part2;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
@@ -13,6 +12,11 @@ public class App {
     static Client client;
     static Map<EventType, ? extends EventLogger> loggerMap;
     static ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+    static Map<Class<?>, Integer> logersCounterMap;
+
+    public void setLogersCounterMap(Map<Class<?>, Integer> logersCounterMap) {
+        this.logersCounterMap = logersCounterMap;
+    }
 
     public static EventLogger getDefaultLogger() {
         return defaultLogger;
@@ -29,11 +33,7 @@ public class App {
         this.defaultLogger = logger;
         this.loggerMap = loggerMap;
     }
-
-    public App() {
-
-    }
-
+    public App() {}
     public static void main(String[] args) {
         App app = ctx.getBean("app", App.class);
         app.eventLogger("Some default event for user 1");
@@ -41,6 +41,7 @@ public class App {
         app.eventLogger("Some info event for user 1", EventType.INFO);
         app.eventLogger("Some error event for user 1", EventType.ERROR);
         app.eventLogger("Some default event for user 1");
+        printLoggersMap(logersCounterMap);
         ctx.close();
     }
     public static void eventLogger(String msg, EventType eventType) {
@@ -57,5 +58,10 @@ public class App {
 
     public static void eventLogger(String msg) {
         eventLogger(msg, null);
+    }
+    public static void printLoggersMap(Map<Class<?>, Integer> map) {
+        for (Map.Entry<Class<?>, Integer> pair : map.entrySet()) {
+            System.out.println(pair.getKey().getSimpleName() + " - " + pair.getValue());
+        }
     }
 }
